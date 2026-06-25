@@ -1,0 +1,31 @@
+  
+/* Parent Section */
+
+.features {
+  display: flex;
+  flex-wrap: nowrap;      /* Prevent next line */
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background: #f8f8f8;
+  overflow-x: auto;       /* Optional: scroll if screen is small */
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 120px;
+}
+
+.feature-item img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+
+.feature-item span {
+  margin-top: 8px;
+  font-weight: 600;
+}

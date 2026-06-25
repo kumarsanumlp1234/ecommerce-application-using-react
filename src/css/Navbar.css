@@ -1,0 +1,41 @@
+ /* MAIN NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #111;
+  color: white;
+}
+
+/* LOGO */
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* CENTER LINKS */
+.nav-links {
+  display: flex;
+  gap: 30px;   /* ✅ THIS FIXES YOUR NO-GAP ISSUE */
+}
+
+/* LINKS */
+.link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.link:hover {
+  color: yellow;
+}
+
+/* RIGHT BUTTON */
+.right button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
