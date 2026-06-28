@@ -1,7 +1,10 @@
  import { Link } from "react-router-dom";
 import "../css/Navbar.css";
-
+import { useState } from "react";
+ import AuthModal from './AuthModal'
 const Navbar = () => {
+    const [showAuth, setShowAuth] = useState(false);
+
   return (
     <nav className="navbar">
       <div className="logo">
@@ -14,10 +17,21 @@ const Navbar = () => {
         <Link className="link" to="/women">Women</Link>
         <Link className="link" to="/cart">Cart</Link>
       </div>
+ <div>
+      <button
+  onClick={() => {
+    
+    setShowAuth(true);
+  }}
+>
+  Login
+</button>
 
-      <div className="right">
-        <button>Login</button>
-      </div>
+      {showAuth && (
+        <AuthModal onClose={() => setShowAuth(false)} />
+      )}
+    </div>
+       
     </nav>
   );
 };
