@@ -175,3 +175,42 @@
   border-radius: 6px;
   cursor: pointer;
 }
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* shared button style */
+.btn-group button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+/* Add to Cart */
+.add-cart-btn {
+  background-color: #ff9f00;
+  color: white;
+}
+
+.add-cart-btn:hover {
+  background-color: #fb8c00;
+  transform: translateY(-2px);
+}
+
+/* Buy Now */
+.buy-now-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.buy-now-btn:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}

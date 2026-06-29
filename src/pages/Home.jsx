@@ -33,7 +33,7 @@ function Home() {
           <img src={ttt} alt="Lowest Prices" className="img3" />
           <span>Lowest Prices</span>
         </div>
-<p>cdscvhjdvjcdkv d</p>
+
       </div>
       <Footer />
 

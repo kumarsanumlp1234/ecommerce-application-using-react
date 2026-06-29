@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import "../css/Women.css";
 import { CartContext } from "../context/CartContext";
+import kurti from '../assets/kurti.png'
 
 const Women = () => {
   const { addToCart } = useContext(CartContext);
@@ -13,14 +14,14 @@ const Women = () => {
   const [orderSuccess, setOrderSuccess] = useState(false);
 
   const products = [
-    { id: 1, name: "Kurti", brand: "Biba", price: 799, image: "kurti.jpg" },
-    { id: 2, name: "Saree", brand: "FabIndia", price: 1999, image: "saree.jpg" },
-    { id: 3, name: "Top", brand: "Zara", price: 599, image: "top.jpg" },
-    { id: 4, name: "Jeans", brand: "Levi's", price: 1299, image: "jeans.jpg" },
-    { id: 5, name: "Dress", brand: "H&M", price: 1499, image: "dress.jpg" },
-    { id: 6, name: "Jacket", brand: "Nike", price: 1999, image: "jacket.jpg" },
-    { id: 7, name: "Skirt", brand: "Roadster", price: 899, image: "skirt.jpg" },
-    { id: 8, name: "Leggings", brand: "Puma", price: 499, image: "leggings.jpg" },
+    { id: 1, name: "Kurti", brand: "Biba", price: 799, image: kurti },
+    { id: 2, name: "Saree", brand: "FabIndia", price: 1999, image: kurti },
+    { id: 3, name: "Top", brand: "Zara", price: 599, image: kurti },
+    { id: 4, name: "Jeans", brand: "Levi's", price: 1299, image: kurti },
+    { id: 5, name: "Dress", brand: "H&M", price: 1499, image: kurti },
+    { id: 6, name: "Jacket", brand: "Nike", price: 1999, image: kurti },
+    { id: 7, name: "Skirt", brand: "Roadster", price: 899, image: kurti },
+    { id: 8, name: "Leggings", brand: "Puma", price: 499, image: kurti},
   ];
 
   // FILTER
@@ -67,26 +68,30 @@ const Women = () => {
       <div className="products">
         {result.map((item) => (
           <div className="card" key={item.id}>
+            <img src={item.image}  alt={item.name}  width="200" />
+            
             <h3>{item.name}</h3>
             <p>{item.brand}</p>
             <p>₹{item.price}</p>
 
-            <button
-              className="add-cart-btn"
-              onClick={() => addToCart(item)}
-            >
-              Add to Cart
-            </button>
+           <div className="btn-group">
+  <button
+    className="add-cart-btn"
+    onClick={() => addToCart(item)}
+  >
+    Add to Cart
+  </button>
 
-            <button
-              className="buy-now-btn"
-              onClick={() => {
-                setSelectedItem(item);
-                setShowForm(true);
-              }}
-            >
-              Buy Now
-            </button>
+  <button
+    className="buy-now-btn"
+    onClick={() => {
+      setSelectedItem(item);
+      setShowForm(true);
+    }}
+  >
+    Buy Now
+  </button>
+</div>
           </div>
         ))}
       </div>

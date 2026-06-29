@@ -1,0 +1,14 @@
+.product-layout {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.filter-sidebar {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.product-content {
+  flex: 1;
+}

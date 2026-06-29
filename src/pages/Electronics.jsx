@@ -1,28 +1,12 @@
  import React, { useState, useContext } from "react";
-import "../css/Men.css";
+import "../css/Electronics.css";
 import { CartContext } from "../context/CartContext";
 import FilterSidebar from "../component/FilterSidebar";
+import Electronicfilter from "../component/Electronicfilter";
 
-import tshirt from "../assets/tshirt.png";
-import shirt from '../assets/shirt.png';
+ 
 
-import jeans from '../assets/jeans.png';
-import jacket  from '../assets/jacket.png';
-import Hoddie from '../assets/Hoddie.png';
-import sweater from '../assets/sweater.png';
-import trackpant from '../assets/trackpant.png';
-import kurta from '../assets/kurta.png';
-import blazzar from '../assets/blazzar.png';
-import cap from '../assets/cap.png';
-import sneaker from '../assets/sneaker.png';
-import shock from '../assets/shock.png'
-import formalpant from  '../assets/formalpant.png';
-
-
-
-
-
-const Men = () => {
+const Electronics = () => {
   const { addToCart } = useContext(CartContext);
 
   const [search, setSearch] = useState("");
@@ -41,27 +25,139 @@ const Men = () => {
   });
 
   const products = [
-   
-  { id: 1, name: "T-Shirt", brand: "Nike", price: 499, color: "Black", size: "M", rating: 4.5, discount: 30, image: tshirt },
-  { id: 2, name: "Shirt", brand: "Adidas", price: 799, color: "Blue", size: "L", rating: 4.2, discount: 20, image: shirt },
-  { id: 3, name: "Jeans", brand: "Levi's", price: 1299, color: "Blue", size: "XL", rating: 4.8, discount: 40, image: jeans },
-  { id: 4, name: "Jacket", brand: "Puma", price: 1999, color: "Red", size: "L", rating: 4.6, discount: 35, image: jacket },
-  { id: 5, name: "Hoodie", brand: "Nike", price: 1499, color: "Black", size: "XL", rating: 4.7, discount: 50, image:Hoddie },
-
-  { id: 6, name: "Sweater", brand: "Zara", price: 1199, color: "Gray", size: "M", rating: 4.4, discount: 25, image: sweater },
-  { id: 7, name: "Track Pants", brand: "Puma", price: 999, color: "Black", size: "L", rating: 4.3, discount: 30, image: trackpant },
-  { id: 8, name: "Shorts", brand: "Nike", price: 699, color: "Green", size: "S", rating: 4.1, discount: 15, image: tshirt },
-  { id: 9, name: "Kurta", brand: "FabIndia", price: 899, color: "White", size: "XL", rating: 4.5, discount: 20, image: kurta },
-  { id: 10, name: "Blazer", brand: "Allen Solly", price: 2999, color: "Navy", size: "L", rating: 4.8, discount: 45, image: blazzar },
-  { id: 11, name: "Cap", brand: "Adidas", price: 499, color: "Black", size: "Free", rating: 4.0, discount: 10, image: cap },
-  { id: 12, name: "Socks", brand: "Puma", price: 299, color: "White", size: "Free", rating: 4.2, discount: 5, image: shock },
-  { id: 14, name: "Formal Pants", brand: "Louis Philippe", price: 1799, color: "Brown", size: "M", rating: 4.6, discount: 35, image:formalpant },
-  { id: 15, name: "Denim Jacket", brand: "Levi's", price: 2499, color: "Blue", size: "XL", rating: 4.7, discount: 30, image:jacket  },
-];
-
- 
-
-  
+    {
+      id: 1,
+      name: "Laptop",
+      brand: "Dell",
+      price: 59999,
+      color: "Silver",
+      size: "15 inch",
+      rating: 4.8,
+      discount: 15,
+       
+    },
+    {
+      id: 2,
+      name: "Smartphone",
+      brand: "Samsung",
+      price: 24999,
+      color: "Black",
+      size: "6.5 inch",
+      rating: 4.6,
+      discount: 20,
+      
+    },
+    {
+      id: 3,
+      name: "Headphones",
+      brand: "Sony",
+      price: 3999,
+      color: "Black",
+      size: "Wireless",
+      rating: 4.7,
+      discount: 30,
+       
+    },
+    {
+      id: 4,
+      name: "Smart Watch",
+      brand: "Apple",
+      price: 29999,
+      color: "White",
+      size: "44mm",
+      rating: 4.9,
+      discount: 10,
+      
+    },
+    {
+      id: 5,
+      name: "Camera",
+      brand: "Canon",
+      price: 45999,
+      color: "Black",
+      size: "DSLR",
+      rating: 4.8,
+      discount: 18,
+      
+    },
+    {
+      id: 6,
+      name: "Bluetooth Speaker",
+      brand: "JBL",
+      price: 5999,
+      color: "Blue",
+      size: "Portable",
+      rating: 4.5,
+      discount: 25,
+       
+    },
+    {
+      id: 7,
+      name: "Keyboard",
+      brand: "Logitech",
+      price: 1999,
+      color: "Black",
+      size: "Full Size",
+      rating: 4.4,
+      discount: 15,
+      
+    },
+    {
+      id: 8,
+      name: "Mouse",
+      brand: "HP",
+      price: 999,
+      color: "Black",
+      size: "Wireless",
+      rating: 4.3,
+      discount: 20,
+      
+    },
+    {
+      id: 9,
+      name: "Monitor",
+      brand: "LG",
+      price: 14999,
+      color: "Black",
+      size: "24 inch",
+      rating: 4.6,
+      discount: 22,
+      
+    },
+    {
+      id: 10,
+      name: "Printer",
+      brand: "Epson",
+      price: 8999,
+      color: "White",
+      size: "A4",
+      rating: 4.2,
+      discount: 12,
+      
+    },
+    {
+      id: 11,
+      name: "Tablet",
+      brand: "Lenovo",
+      price: 18999,
+      color: "Gray",
+      size: "10 inch",
+      rating: 4.5,
+      discount: 18,
+      
+    },
+    {
+      id: 12,
+      name: "Power Bank",
+      brand: "Mi",
+      price: 1499,
+      color: "Black",
+      size: "20000mAh",
+      rating: 4.4,
+      discount: 28,
+       
+    },
+  ];
 
   let result = products.filter((item) => {
     return (
@@ -88,17 +184,12 @@ const Men = () => {
 
   return (
     <div className="men-layout">
-
       <aside className="filter-sidebar">
-        <FilterSidebar
-          filters={filters}
-          setFilters={setFilters}
-        />
+        <Electronicfilter filters={filters} setFilters={setFilters} />
       </aside>
 
       <main className="men-page">
-
-        <h1>Men's Clothing</h1>
+        <h1>Electronics</h1>
 
         <select onChange={(e) => setSortType(e.target.value)}>
           <option value="default">Default</option>
@@ -117,12 +208,10 @@ const Men = () => {
         <div className="products">
           {result.map((item) => (
             <div className="card" key={item.id}>
-               <img src={item.image} alt={item.name} width="200" />
-
+          
               <h3>{item.name}</h3>
               <p>{item.brand}</p>
               <p>₹{item.price}</p>
-
               <p>⭐ {item.rating}</p>
               <p>🎨 {item.color}</p>
               <p>🏷️ {item.discount}%</p>
@@ -150,14 +239,15 @@ const Men = () => {
           ))}
         </div>
 
-        {/* Checkout */}
         {showForm && (
           <div className="checkout-modal">
             <div className="checkout-box">
               <h2>Checkout</h2>
 
               {selectedItem && (
-                <p><b>{selectedItem.name}</b> - ₹{selectedItem.price}</p>
+                <p>
+                  <b>{selectedItem.name}</b> - ₹{selectedItem.price}
+                </p>
               )}
 
               <input placeholder="Full Name" />
@@ -179,15 +269,12 @@ const Men = () => {
         {orderSuccess && (
           <div className="success-box">
             <h2>🎉 Order Confirmed!</h2>
-            <button onClick={() => setOrderSuccess(false)}>
-              OK
-            </button>
+            <button onClick={() => setOrderSuccess(false)}>OK</button>
           </div>
         )}
-
       </main>
     </div>
   );
 };
 
-export default Men;
+export default Electronics;
